@@ -18,15 +18,21 @@ attr_accessor :author, :content
     end
     return all_gossips
   end
-
   def self.find(id)
-      gossips = Array.new
-      CSV.read("./db/gossip.csv").each_with_index do |j, i|
-        if (id == i + 1)
-          gossips << Gossip.new(j[0], j[1])
-          break
-        end
+    gossips = Array.new
+    CSV.read("./db/gossip.csv").each_with_index do |j, i|
+      if (id == i + 1)
+        gossips << Gossip.new(j[0], j[1])
+        break
       end
-      return gossips
+    end
+    return gossips
+  end
+
+  def self.edit(id, new_author, new_gossip)
+      gossips = self.all
+      gossips[id].author = new_author
+      gossips[id].content = new_content
+      CSV.open('./db/gossip.csv', "w"){gossips.each{|gossip| gossip.save}}
   end
 end
