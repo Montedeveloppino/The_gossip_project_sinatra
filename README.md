@@ -60,4 +60,4 @@ Pas de licence
 
 ## Acknowledgments
 
-* **Basil Albader** - *Initial work* - [Balbader](https://github.com/Balbader)
+* **Basil Albader** - *Team mate* - [Balbader](https://github.com/Balbader)
