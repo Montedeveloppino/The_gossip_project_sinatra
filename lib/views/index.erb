@@ -7,10 +7,10 @@
     <a href="/gossips/new/">Create new gossip</a>
     <% gossips.each_with_index do |j, i| %>
         <p>
-          <a href="/gossips/<%= (i + 1)%>"><%= j.author %></a><br/>
+          <a href="/gossips/<%= (i)%>"><%= j.author %></a><br/>
 
           <%= j.content %><br/>
-          <button> <a href="/gossips/<%= (i + 1)%>/edit/">Modifier</button>
+          <button> <a href="/gossips/<%= i %>/edit/">Modifier</button>
         </p>
       <% end %>
   </body>

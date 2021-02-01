@@ -19,12 +19,12 @@ class ApplicationController < Sinatra::Base
   erb :show, locals: {id: params['id'].to_i, gossips: Gossip.find(params['id'].to_i)}
   end
   # Aller chercher la page édit
-  get '/gossips/:id/edit' do
+  get '/gossips/:id/edit/' do
     erb :edit, locals: {id: params['id'].to_i, gossips: Gossip.find(params['id'].to_i)}
   end
   # Afficher le formulaire dans la page édit
-  post '/gossips/:id/edit' do
-    Gossip.update(params['id'].to_i, params['gossip_author'], params['gossip_content'])
+  post '/gossips/:id/edit/' do
+    Gossip.edit(params['id'].to_i, params['gossip_author'], params['gossip_content'])
     redirect '/'
   end
 

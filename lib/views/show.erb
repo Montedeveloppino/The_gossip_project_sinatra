@@ -4,12 +4,12 @@
   </head>
   <body>
     <h1>Voici la page du gossip</h1>
-    <% gossips.each do |gossip| %>
+    
         <p>
-          Voici le potin n°=  <%= id %><br/>
-          Son auteur est <%= gossip.author.upcase %><br/>
-          Et son gossip est le suivant : <%= gossip.content %>
+          Voici le potin n°=  <%= id +1 %><br/>
+          Son auteur est <%= gossips.author.upcase %><br/>
+          Et son gossip est le suivant : <%= gossips.content %>
         </p>
-      <% end %>
+      
   </body>
 </html>
