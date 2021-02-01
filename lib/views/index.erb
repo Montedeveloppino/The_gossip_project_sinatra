@@ -5,5 +5,12 @@
   <body>
     <h1>Mon super site de gossip, depuis le dossier views nikoumouk !</h1>
     <a href="/gossips/new/">Create new gossip</a>
+    <% gossips.each_with_index do |j, i| %>
+        <p>
+          <a href="/gossips/<%= (i + 1)%>"><%= j.author %></a><br/>
+            
+          <%= j.content %>
+        </p>
+      <% end %>
   </body>
 </html>
