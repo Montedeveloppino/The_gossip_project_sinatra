@@ -22,15 +22,6 @@ attr_accessor :author, :content
     gossips = self.all
     gossips[id.to_i]
   end 
-=begin CSV.read("./db/gossip.csv").each_with_index do |j, i|
-      if (id == i)
-        gossips << Gossip.new(j[0], j[1])
-        break
-      end
-    end
-    return gossips
-   end
-=end
 
   def self.edit(id, new_author, new_gossip)
       gossips = self.all
