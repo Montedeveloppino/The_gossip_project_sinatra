@@ -3,12 +3,12 @@
     <title>Edit a gossip</title>
   </head>
   <body>
-    <h1>Edit a gossip</h1>
-    <p>Edit ton potin <%= id + 1 %> via le formulaire ci-dessous</p>
+    <h1>Modifier mon gossip</h1>
+    <p>Modifie ton gossip numéro <%= id + 1 %></p>
     <form action='/gossips/<%= id%>/edit/' method='POST'>
     <% gossips = Gossip.all %>
-      Saisi ici ton nom : <input type='text' name='gossip_author' value="<%= gossips[id].author%>"/><br/>
-      Balance ton potin : <input type='text' name='gossip_content' value="<%= gossips[id].content%>"/><br/>
+      Saisis ici ton nom : <input type='text' name='gossip_author' value="<%= gossips[id].author%>"/><br/>
+      Balance ta modif : <input type='text' name='gossip_content' value="<%= gossips[id].content%>"/><br/>
        <input type='submit'/>
     </form>
   </body>
